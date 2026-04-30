@@ -1,3 +1,1 @@
-# Welcome to your Lovable project
-
-TODO: Document your project here
+I created this League of Legends matchup website as part of a class project, but later decided to improve it and make it my own. Typically, players use sites like U.GG, where you have to search your username and wait for the page to load, and even then, it doesn’t always show the exact matchup you’re looking for. I wanted something faster and more specific, so I built this tool for myself and my friends. The goal was to quickly find matchup insights, recommended items, and useful information without unnecessary loading time or extra steps. This project focuses on efficiency, simplicity, and giving players exactly what they need to perform better in their games.
