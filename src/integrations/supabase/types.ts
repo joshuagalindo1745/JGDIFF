@@ -14,7 +14,75 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string | null
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      saved_matchups: {
+        Row: {
+          ally_data: Json
+          created_at: string
+          enemy_data: Json
+          game_state: Json
+          id: string
+          mode: string
+          notes: string | null
+          predicted_win_rate: number | null
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          ally_data?: Json
+          created_at?: string
+          enemy_data?: Json
+          game_state?: Json
+          id?: string
+          mode?: string
+          notes?: string | null
+          predicted_win_rate?: number | null
+          title: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          ally_data?: Json
+          created_at?: string
+          enemy_data?: Json
+          game_state?: Json
+          id?: string
+          mode?: string
+          notes?: string | null
+          predicted_win_rate?: number | null
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
