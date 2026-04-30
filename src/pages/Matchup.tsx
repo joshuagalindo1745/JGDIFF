@@ -79,7 +79,7 @@ export default function Matchup() {
     if (!user) { toast.error("Sign in to save matchups"); return; }
     if (!result) { toast.error("Run a prediction first"); return; }
     if (!title.trim()) { toast.error("Add a title"); return; }
-    const { error } = await supabase.from("saved_matchups").insert({
+    const { error } = await supabase.from("saved_matchups").insert([{
       user_id: user.id,
       title: title.trim(),
       mode,
@@ -87,7 +87,7 @@ export default function Matchup() {
       enemy_data: enemy as unknown as Record<string, unknown>,
       game_state: gameState,
       predicted_win_rate: result.winRate,
-    });
+    }]);
     if (error) toast.error(error.message);
     else { toast.success("Matchup saved to your codex"); setTitle(""); }
   };
