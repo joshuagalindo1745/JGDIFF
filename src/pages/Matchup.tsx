@@ -83,8 +83,8 @@ export default function Matchup() {
       user_id: user.id,
       title: title.trim(),
       mode,
-      ally_data: ally as unknown as Record<string, unknown>,
-      enemy_data: enemy as unknown as Record<string, unknown>,
+      ally_data: JSON.parse(JSON.stringify(ally)),
+      enemy_data: JSON.parse(JSON.stringify(enemy)),
       game_state: gameState,
       predicted_win_rate: result.winRate,
     }]);
